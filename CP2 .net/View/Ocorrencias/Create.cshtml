@@ -1,0 +1,15 @@
+@model Ocorrencia
+<h2>@(Model.Id == 0 ? "Nova Ocorrência" : "Editar Ocorrência")</h2>
+
+<form method="post">
+    <label>Placa:</label>
+    <input type="text" name="PlacaMoto" value="@Model?.PlacaMoto" required /><br />
+
+    <label>Descrição:</label>
+    <input type="text" name="Descricao" value="@Model?.Descricao" required /><br />
+
+    <label>Vaga:</label>
+    <input type="text" name="Vaga" value="@Model?.Vaga" /><br />
+
+    <button type="submit">Salvar</button>
+</form>

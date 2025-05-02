@@ -1,0 +1,21 @@
+@model List<Moto>
+<h2>Motos no Pátio</h2>
+<a href="/Motos/Create">Nova Moto</a>
+<table>
+    <tr><th>ID</th><th>Placa</th><th>Modelo</th><th>Cor</th><th>Vaga</th><th>Entrada</th><th>Ações</th></tr>
+    @foreach (var moto in Model)
+    {
+        <tr>
+            <td>@moto.Id</td>
+            <td>@moto.Placa</td>
+            <td>@moto.Modelo</td>
+            <td>@moto.Cor</td>
+            <td>@moto.Vaga</td>
+            <td>@moto.Entrada.ToString("dd/MM/yyyy HH:mm")</td>
+            <td>
+                <a href="/Motos/Edit/@moto.Id">Editar</a> |
+                <a href="/Motos/Delete/@moto.Id">Excluir</a>
+            </td>
+        </tr>
+    }
+</table>
