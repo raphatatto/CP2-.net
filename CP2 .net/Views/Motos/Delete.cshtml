@@ -1,4 +1,9 @@
+@using CP2_net.Models
 @model Moto
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
 <h2>Excluir Moto</h2>
 <p>Tem certeza que deseja excluir a moto com placa <strong>@Model.Placa</strong>?</p>
 <form method="post">

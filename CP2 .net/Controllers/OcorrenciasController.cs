@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Mvc;
+using CP2_net.Models;
+
 public class OcorrenciasController : Controller
 {
     private static List<Ocorrencia> ocorrencias = new();
@@ -9,8 +12,9 @@ public class OcorrenciasController : Controller
 
     public ActionResult Create()
     {
-        return View();
+        return View(new Ocorrencia()); 
     }
+
 
     [HttpPost]
     public ActionResult Create(Ocorrencia o)

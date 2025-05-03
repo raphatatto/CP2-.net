@@ -1,0 +1,22 @@
+﻿@using CP2_net.Models
+@model Ocorrencia
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>Editar Ocorrência</h2>
+
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <label>Placa da Moto:</label>
+    <input type="text" name="PlacaMoto" value="@Model.PlacaMoto" required /><br />
+
+    <label>Descrição:</label>
+    <input type="text" name="Descricao" value="@Model.Descricao" required /><br />
+
+    <label>Vaga:</label>
+    <input type="text" name="Vaga" value="@Model.Vaga" /><br />
+
+    <button type="submit">Salvar Alterações</button>
+</form>

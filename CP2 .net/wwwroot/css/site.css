@@ -1,22 +1,76 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
 }
+
+nav {
+    background-color: #0078D7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-right: 15px;
+        font-weight: bold;
+    }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+h2 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #0078D7;
+    color: white;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 300px;
+    display: block;
+}
+
+.btn {
+    padding: 6px 12px;
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+    .btn:hover {
+        background-color: #005fa3;
+    }
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+    .btn-danger:hover {
+        background-color: #a71d2a;
+    }
+

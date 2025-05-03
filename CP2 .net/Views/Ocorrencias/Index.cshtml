@@ -1,0 +1,40 @@
+@using CP2_net.Models
+@model List<Ocorrencia>
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+
+<h2>Ocorrências no Pátio</h2>
+<a href="/Ocorrencias/Create">Registrar Nova Ocorrência</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Placa da Moto</th>
+            <th>Descrição</th>
+            <th>Vaga</th>
+            <th>Data e Hora</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var o in Model)
+        {
+            <tr>
+                <td>@o.Id</td>
+                <td>@o.PlacaMoto</td>
+                <td>@o.Descricao</td>
+                <td>@o.Vaga</td>
+                <td>@o.DataHora.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>
+                    <a class="btn" href="/Ocorrencias/Edit/@o.Id">Editar</a>
+                    <a class="btn btn-danger" href="/Ocorrencias/Delete/@o.Id">Excluir</a>
+
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

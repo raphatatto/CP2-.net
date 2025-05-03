@@ -1,8 +1,13 @@
+@using CP2_net.Models
 @model Ocorrencia
-<h2>@(Model.Id == 0 ? "Nova Ocorrência" : "Editar Ocorrência")</h2>
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>Nova Ocorrência</h2>
 
 <form method="post">
-    <label>Placa:</label>
+    <label>Placa da Moto:</label>
     <input type="text" name="PlacaMoto" value="@Model?.PlacaMoto" required /><br />
 
     <label>Descrição:</label>

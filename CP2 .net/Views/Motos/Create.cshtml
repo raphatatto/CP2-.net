@@ -1,0 +1,23 @@
+@using CP2_net.Models
+@model Moto
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>Nova Moto</h2>
+
+<form method="post">
+    <label>Placa:</label>
+    <input type="text" name="Placa" value="@Model?.Placa" required /><br />
+
+    <label>Modelo:</label>
+    <input type="text" name="Modelo" value="@Model?.Modelo" required /><br />
+
+    <label>Cor:</label>
+    <input type="text" name="Cor" value="@Model?.Cor" /><br />
+
+    <label>Vaga:</label>
+    <input type="text" name="Vaga" value="@Model?.Vaga" /><br />
+
+    <button type="submit">Salvar</button>
+</form>
